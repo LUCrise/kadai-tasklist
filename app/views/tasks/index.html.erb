@@ -7,3 +7,18 @@
 </ul>
 
 <%= link_to "タスクの追加", new_task_path %>
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+  <% if logged_in? %>
+
+  <% else %>
+    <ul class="navbar-nav">
+      <li class="nav-item"><%= link_to 'Signup', signup_path, class: 'nav-link' %></li>
+      <li class="nav-item"><%= link_to 'Login', login_path, class: 'nav-link' %></li>
+    </ul>
+  <% end %>
+</div>
+
+<ul class="dropdown-menu dropdown-menu-end">
+  <li class="dropdown-item"><%= link_to 'Logout', logout_path, method: :delete, class: 'nav-link' %></li>
+</ul>

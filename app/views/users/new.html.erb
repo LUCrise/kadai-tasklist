@@ -29,6 +29,13 @@
       </div>
 
       <%= f.submit 'Sign up', class: 'btn btn-primary w-100' %>
+      
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item"><%= link_to 'アカウント登録済みの方はこちらからログイン', login_path, class: 'nav-link' %></li>
+        </ul>
+      </div>
+      
     <% end %>
   </div>
 </div>
